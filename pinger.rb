@@ -4,7 +4,7 @@ require 'net/http'
 require 'sinatra'
 
 get '/' do
-	"Use this endpoint to ping FeedBurner. Make a POST request to this endpont with a parameter of url=[your FeedBurner feed URL] to ping FeedBurner with updates to your feed."
+	"Use this endpoint to ping FeedBurner. Make a POST request to it with a parameter of url=[your FeedBurner feed URL] to ping FeedBurner with updates to your feed."
 end
 
 post '/' do
