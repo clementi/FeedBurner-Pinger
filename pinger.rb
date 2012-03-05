@@ -1,10 +1,11 @@
 require 'cgi'
+require 'haml'
 require 'json'
 require 'net/http'
 require 'sinatra'
 
 get '/' do
-	"Use this endpoint to ping FeedBurner. Make a POST request to it with a parameter of url=[your FeedBurner feed URL] to ping FeedBurner with updates to your feed."
+	haml :index
 end
 
 post '/' do
