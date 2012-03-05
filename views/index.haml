@@ -2,8 +2,8 @@
 %head
   %meta{"charset" => "utf-8"}
   %title FBPing
-  %link{"rel" => "stylesheet", "href" => "/css/bootstrap.min.css", "type" => "text/css"}
-  %link{"rel" => "stylesheet", "href" => "/css/main.css", "type" => "text/css"}
+  %link{"rel" => "stylesheet", "href" => url("/css/bootstrap.min.css"), "type" => "text/css"}
+  %link{"rel" => "stylesheet", "href" => url("/css/main.css"), "type" => "text/css"}
 %body
   :markdown
     Use this endpoint to ping FeedBurner. Make a POST request to it with a parameter of `url=[your FeedBurner feed URL]` to ping FeedBurner with updates to your feed.
