@@ -4,6 +4,12 @@
   %title FBPing
   %link{"rel" => "stylesheet", "href" => url("/css/bootstrap.min.css"), "type" => "text/css"}
   %link{"rel" => "stylesheet", "href" => url("/css/main.css"), "type" => "text/css"}
+  %script{"type" => "text/javascript", "src" => url("/js/google-analytics.js")}
 %body
-  :markdown
-    Use this endpoint to ping FeedBurner. Make a POST request to it with a parameter of `url=[your FeedBurner feed URL]` to ping FeedBurner with updates to your feed.
+  .jumbotron
+    .container
+      %h1 FeedBurner Pinger
+  .description
+    .container
+      :markdown
+        Use this endpoint to ping FeedBurner. Make a POST request to it with a parameter of `url=[your FeedBurner feed URL]` to ping FeedBurner with updates to your feed.

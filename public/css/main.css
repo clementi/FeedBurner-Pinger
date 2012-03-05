@@ -1,0 +1,12 @@
+body {
+	padding: 30px;
+}
+.jumbotron {
+	text-align: center;
+}
+.jumbotron h1 {
+	font-size: 52px;
+}
+.description {
+	margin-top: 40px;
+}
