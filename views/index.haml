@@ -13,3 +13,21 @@
     .container
       :markdown
         Use this endpoint to ping FeedBurner. Make a POST request to it with a parameter of `url=[your FeedBurner feed URL]` to ping FeedBurner with updates to your feed.
+
+        When you make a successful request, you'll get this JSON response:
+        <pre><code>{
+          "status": "SUCCEEDED",
+          "message": "Successfully pinged"
+        }</code></pre>
+
+        If you make a request too soon after your last one, you'll get this JSON response:
+        <pre><code>{
+          "status": "FAILED",
+          "message": "Ping is throttled"
+        }</code></pre>
+
+        If something went wrong, you'll get this JSON response:
+        <pre><code>{
+          "status": "FAILED",
+          "message": "Your Ping resulted in an Error"
+        }</code></pre>
