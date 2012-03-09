@@ -1,6 +1,14 @@
 body {
 	padding: 30px;
 }
+body, p {
+    font-size: 16px;
+    font-family: Ubuntu, sans-serif;
+}
+pre, code {
+    font-size: 16px;
+    font-family: 'Ubuntu Mono', monospace;
+}
 .jumbotron {
 	text-align: center;
 }
