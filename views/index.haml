@@ -5,7 +5,7 @@
   %link{"rel" => "stylesheet", "href" => url("/css/bootstrap.min.css"), "type" => "text/css"}
   %link{"rel" => "stylesheet", "href" => url("/css/main.css"), "type" => "text/css"}
   %link{"rel" => "stylesheet", "href" => "http://yandex.st/highlightjs/6.1/styles/solarized_dark.min.css", "type" => "text/css"}
-  %link{"rel" => "stylesheet", "href=" => "http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Ubuntu:400,700", "type" => "text/css"}
+  %link{"rel" => "stylesheet", "href" => "http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Ubuntu:400,700", "type" => "text/css"}
   %script{"type" => "text/javascript", "src" => "http://yandex.st/highlightjs/6.1/highlight.min.js"}
   %script{"type" => "text/javascript"}
     hljs.initHighlightingOnLoad();
@@ -15,24 +15,34 @@
       %h1 FeedBurner Ping Service
   .description
     .container
-      :markdown
-        Use this endpoint to ping FeedBurner. Make a POST request to it with a parameter of `url=[your FeedBurner feed URL]` to ping FeedBurner with updates to your feed.
-
-        When you make a successful request, you'll get this JSON response:
-        <pre><code class="javascript">{
-          "status": "SUCCEEDED",
-          "message": "Successfully pinged"
-        }</code></pre>
-
-        If you make a request too soon after your last one, you'll get this JSON response:
-        <pre><code class="javascript">{
-          "status": "FAILED",
-          "message": "Ping is throttled"
-        }</code></pre>
-
-        If something went wrong, you'll get this JSON response:
-        <pre><code class="javascript">{
-          "status": "FAILED",
-          "message": "Your Ping resulted in an Error"
-        }</code></pre>
+      .row
+        .span12
+          :markdown
+            Use this endpoint to ping FeedBurner. Make a POST request to it with a parameter of `url=[your FeedBurner feed URL]` to ping FeedBurner with updates to your feed, like this (Ruby):
+            <pre><code class="ruby">response = Net::HTTP.post_form URL('http://feedburner-pinger.herokuapp.com'), {:url => 'http://feeds.feedburner.com/MyFeed'}
+            </code></pre>
+      .row
+        .span12
+          :markdown
+            When you make a successful request, you'll get this JSON response:
+            <pre><code class="javascript">{
+              "status": "SUCCEEDED",
+              "message": "Successfully pinged"
+            }</code></pre>
+      .row
+        .span12
+          :markdown
+            If you make a request too soon after your last one, you'll get this JSON response:
+            <pre><code class="javascript">{
+              "status": "FAILED",
+              "message": "Ping is throttled"
+            }</code></pre>
+      .row
+        .span12
+          :markdown
+            If something went wrong, you'll get this JSON response:
+            <pre><code class="javascript">{
+              "status": "FAILED",
+              "message": "Your Ping resulted in an Error"
+            }</code></pre>
   %script{"type" => "text/javascript", "src" => url("/js/google-analytics.js")}
