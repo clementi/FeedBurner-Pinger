@@ -3,6 +3,7 @@ require 'haml'
 require 'json'
 require 'net/http'
 require 'sinatra'
+require File.join(File.dirname(__FILE__), 'environment')
 
 get '/' do
   haml :index
