@@ -16,7 +16,7 @@ post '/' do
 
   throttled_result = /Ping is throttled/.match(response)
   if throttled_result then
-    return { :status => "FAILED", :message => throttled_result }.to_json
+    return { :status => "THROTTLED", :message => throttled_result }.to_json
   end
 
   success_result = /Successfully pinged/.match(response)
