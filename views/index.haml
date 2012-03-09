@@ -24,15 +24,14 @@
             response = Net::HTTP.post_form endpoint, {:url => feed_url}
             </code></pre>
       .row
-        .span12
+        .span6
           :markdown
             When you make a successful request, you'll get this JSON response:
             <pre><code class="javascript">{
               "status": "SUCCEEDED",
               "message": "Successfully pinged"
             }</code></pre>
-      .row
-        .span12
+        .span6
           :markdown
             If you make a request too soon after your last one, you'll get this JSON response:
             <pre><code class="javascript">{
