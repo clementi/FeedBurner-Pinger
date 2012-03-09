@@ -19,7 +19,9 @@
         .span12
           :markdown
             Use this endpoint to ping FeedBurner. Make a POST request to it with a parameter of `url=[your FeedBurner feed URL]` to ping FeedBurner with updates to your feed, like this (Ruby):
-            <pre><code class="ruby">response = Net::HTTP.post_form URL('http://feedburner-pinger.herokuapp.com'), {:url => 'http://feeds.feedburner.com/MyFeed'}
+            <pre><code class="ruby">endpoint = URL('http://feedburner-pinger.herokuapp.com/')
+            feed_url = 'http://feeds.feedburner.com/MyFeed'
+            response = Net::HTTP.post_form endpoint, {:url => feed_url}
             </code></pre>
       .row
         .span12
