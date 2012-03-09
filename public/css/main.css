@@ -18,3 +18,7 @@ pre, code {
 .description {
 	margin-top: 40px;
 }
+footer {
+    text-align: center;
+    font-size: 14px;
+}
