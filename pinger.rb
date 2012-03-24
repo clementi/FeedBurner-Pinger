@@ -6,10 +6,12 @@ require 'sinatra'
 require File.join(File.dirname(__FILE__), 'environment')
 
 get '/' do
+  log request, params
   haml :index
 end
 
 post '/' do
+  log request, params
   content_type :json  
 
   response = Net::HTTP.get URI('http://feedburner.google.com/fb/a/pingSubmit?bloglink=' + CGI::escape(params[:url]))
@@ -30,4 +32,8 @@ post '/' do
   else
     return { :status => "FAILED", :message => "An unknown error occurred" }.to_json
   end
+end
+
+def log(request, params)
+  puts "#{request.request_method} #{request.path_info} #{request.ip} #{params}"
 end
