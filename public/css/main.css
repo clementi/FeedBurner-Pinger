@@ -2,12 +2,13 @@ body {
 	padding: 30px;
 }
 body, p {
-    font-size: 16px;
-    font-family: Ubuntu, sans-serif;
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.2em;
 }
 pre, code {
-    font-size: 16px;
-    font-family: 'Ubuntu Mono', monospace;
+    font-size: 14px;
+    font-family: 'Source Code Pro', monospace;
 }
 .jumbotron {
 	text-align: center;
