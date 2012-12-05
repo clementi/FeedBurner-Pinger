@@ -2,12 +2,12 @@ GEM
   remote: http://rubygems.org/
   specs:
     haml (3.1.7)
-    maruku (0.6.0)
+    maruku (0.6.1)
       syntax (>= 1.0.0)
     rack (1.4.1)
     rack-protection (1.2.0)
       rack
-    sinatra (1.3.2)
+    sinatra (1.3.3)
       rack (~> 1.3, >= 1.3.6)
       rack-protection (~> 1.2)
       tilt (~> 1.3, >= 1.3.3)
@@ -15,9 +15,10 @@ GEM
     tilt (1.3.3)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES
   haml (= 3.1.7)
-  maruku (= 0.6.0)
-  sinatra (= 1.3.2)
+  maruku (= 0.6.1)
+  sinatra (= 1.3.3)
