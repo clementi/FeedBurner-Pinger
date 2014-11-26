@@ -16,6 +16,7 @@
       %h1 Ping FeedBurner
   .description
     .container
+      %h2 Usage
       .row
         .span12
           :markdown
@@ -47,6 +48,14 @@
               "status": "FAILED",
               "message": "Your Ping resulted in an Error"
             }</code></pre>
+      %h2 What's New
+      .row
+        .span12
+          %ul
+            %li When the status is either SUCCEEDED or THROTTLED, the endpoint returns HTTP 200. In the case of FAILED, it returns HTTP 500.
+            %li
+              Client library for .NET at 
+              %a{"href" => "https://github.com/clementi/FeedBurnerPinger.Client"} FeedBurnerPinger.Client.
   %footer
     .container
       Created by
