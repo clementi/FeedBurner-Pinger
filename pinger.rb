@@ -18,7 +18,7 @@ post '/' do
   feed_url = params[:url]
   feed_name = get_feed_name(feed_url)
 
-  request_body = build_request_bodyfeed_name, feed_url)
+  request_body = build_request_body(feed_name, feed_url)
 
   request = Net::HTTP::Post.new(endpoint.request_uri)
   request.body = request_body
